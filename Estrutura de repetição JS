@@ -1,0 +1,29 @@
+const listaArgumentos = process.argv.slice(2);
+
+console.log('-------------------------- Executando um For -------------------------');
+for(let controladorFor = 0; controladorFor < listaArgumentos.length; controladorFor++){
+   console.log(`Posicao ${controladorFor} valor lido = ${listaArgumentos[controladorFor]}`); 
+}
+
+console.log('-------------------------- Executando um WHILE -------------------------');
+let controladorWhile = 0;
+while(controladorWhile < listaArgumentos.length){
+    console.log(`Posicao ${controladorWhile} valor lido = ${listaArgumentos[controladorWhile]}`);
+    controladorWhile++; //não esquecer de colocar pois se nao ele entra em um loop
+}
+
+console.log('-------------------------- Executando um DO WHILE -------------------------'); // ele executa antes de chegar, se a informação não for verdadeira da erro
+let controladorDoWhile = 0;
+do{
+    console.log(`Posicao ${controladorDoWhile} valor lido = ${listaArgumentos[controladorDoWhile]}`);
+    controladorDoWhile++;
+}while(controladorDoWhile < listaArgumentos.length)
+
+console.log('-------------------------- Executando um FOR OF -------------------------');
+let controladorForOf = 0;
+for(const argumento of listaArgumentos){
+    console.log(` Posicao ${controladorForOf} Valor lido = ${argumento}`);
+    controladorForOf++;
+}
+
+// o teste do codigo se da atraves da abertura do terminal e se escreve node . a pasta e coloca listas de nomes e coissas para que ele faça a leitura 
